@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0632EDD41CA1A6DB00DD3CB8 /* Parse+LiveQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0632EDD31CA1A6DB00DD3CB8 /* Parse+LiveQuery.swift */; };
 		0632EDD51CA1A6DB00DD3CB8 /* Parse+LiveQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0632EDD31CA1A6DB00DD3CB8 /* Parse+LiveQuery.swift */; };
+		091471D31E427BD800E9BFC0 /* ParseLiveQuery-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 091471D21E427BD800E9BFC0 /* ParseLiveQuery-Bridging-Header.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		091471D41E427BD800E9BFC0 /* ParseLiveQuery-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 091471D21E427BD800E9BFC0 /* ParseLiveQuery-Bridging-Header.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		091471E31E427BE200E9BFC0 /* PFDecoder_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 091471E21E427BE200E9BFC0 /* PFDecoder_internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		091471E41E427BE200E9BFC0 /* PFDecoder_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 091471E21E427BE200E9BFC0 /* PFDecoder_internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		094AE8F01E25ADF300F408BC /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 094AE8EF1E25ADF300F408BC /* libicucore.tbd */; };
 		094AE8F21E25AE0500F408BC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094AE8F11E25AE0500F408BC /* CFNetwork.framework */; };
 		094AE8F41E25AE1100F408BC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094AE8F31E25AE1100F408BC /* Security.framework */; };
@@ -176,6 +180,8 @@
 /* Begin PBXFileReference section */
 		0632EDD31CA1A6DB00DD3CB8 /* Parse+LiveQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Parse+LiveQuery.swift"; sourceTree = "<group>"; };
 		090FFBA71E26F14F0010EC2E /* Parse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Parse.xcodeproj; path = "../Carthage/Checkouts/Parse-SDK-iOS-OSX/Parse.xcodeproj"; sourceTree = "<group>"; };
+		091471D21E427BD800E9BFC0 /* ParseLiveQuery-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ParseLiveQuery-Bridging-Header.h"; sourceTree = "<group>"; };
+		091471E21E427BE200E9BFC0 /* PFDecoder_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFDecoder_internal.h; sourceTree = "<group>"; };
 		09301A181E270795003C22EF /* SocketRocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SocketRocket.xcodeproj; path = ../Carthage/Checkouts/SocketRocket/SocketRocket.xcodeproj; sourceTree = "<group>"; };
 		094AE8EF1E25ADF300F408BC /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/usr/lib/libicucore.tbd; sourceTree = DEVELOPER_DIR; };
 		094AE8F11E25AE0500F408BC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
@@ -363,6 +369,8 @@
 				F534A5B31BDB09CE00CBD11A /* Operation.swift */,
 				F54D58B71C8E3446009F8D6C /* ClientPrivate.swift */,
 				F54D58B91C8E345F009F8D6C /* BoltsHelpers.swift */,
+				091471D21E427BD800E9BFC0 /* ParseLiveQuery-Bridging-Header.h */,
+				091471E21E427BE200E9BFC0 /* PFDecoder_internal.h */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -374,6 +382,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091471E41E427BE200E9BFC0 /* PFDecoder_internal.h in Headers */,
+				091471D41E427BD800E9BFC0 /* ParseLiveQuery-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +391,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091471E31E427BE200E9BFC0 /* PFDecoder_internal.h in Headers */,
+				091471D31E427BD800E9BFC0 /* ParseLiveQuery-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +685,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "${SWIFT_MODULE_NAME}/Internal/${SWIFT_MODULE_NAME}-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -699,6 +712,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				SWIFT_OBJC_BRIDGING_HEADER = "${SWIFT_MODULE_NAME}/Internal/${SWIFT_MODULE_NAME}-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
