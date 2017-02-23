@@ -10,7 +10,10 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
+  s.platform = :ios, :osx, :tvos
+
   s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
   
   s.source_files = 'Sources/ParseLiveQuery/**/*.{swift,h}'
@@ -18,5 +21,5 @@ Pod::Spec.new do |s|
   
   s.dependency 'Parse', '~> 1.14.2'
   s.dependency 'Bolts-Swift', '~> 1.3'
-  s.dependency 'SocketRocket', '~> 0.5'
+  s.dependency 'Starscream', '2.0.3'
 end
